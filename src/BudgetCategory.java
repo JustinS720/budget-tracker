@@ -35,8 +35,8 @@ public class BudgetCategory implements Comparable<BudgetCategory> {
 
     @Override
     public int compareTo(BudgetCategory other) {
-        if (this.getDifference() > other.getDifference()) return 1;
+        if (this.getDifference() > other.getDifference()) return -1;
         if (this.getDifference() == other.getDifference()) return 0;
-        return -1;
+        return 1;
     }
 }
