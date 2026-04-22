@@ -20,4 +20,12 @@ public class BudgetCategory {
     public double getSpent(){
         return spent;
     }
+
+    @Override
+    public String toString() {
+        String limitString = String.format("$%.2f", limit);
+        String spentString = String.format("$%.2f", spent);
+        return "The budget limit for " + category + " was: " + limitString + 
+        " but the actual spend was " + spentString;
+    }
 }
